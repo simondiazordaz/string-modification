@@ -23,7 +23,7 @@ def first_word(full_name):
     first_word = name_split[0] 
     return first_word 
 
-def find_vowels(full_name): #used google for some minor help 
+def find_vowels(full_name):
     vowels = set("aeiouAEIOU") 
     total_vowels = 0 
     for char in full_name: 
@@ -102,7 +102,7 @@ while repeat:
         print("Goodbye!")
         repeat = False'''
 
-def remove(s): #B, only works lower case
+def remove(s): #B
     unwant = input("Type letter you want to remove: ")
     if unwant in s:
         return print(s.replace(unwant, ''))
@@ -117,7 +117,7 @@ while repeat:
         print("Goodbye!")
         repeat = False'''
 
-def char_num(s): #c
+def char_num(s): #C
     alphcount = 0
     ecount = 0
     for char in s:
@@ -148,13 +148,6 @@ def char_num_mod(s): #D
                 ecount += 1
     percente = (ecount / alphcount) * 100
     return print(f"Your text contains {charcount} characters, {alphcount} alphabetic characters, of which {ecount} ({percente:.2f}%) are 'e'.")
-'''repeat = True
-while repeat:
-    char_num_mod(poem)
-    r1 = int(input("Do you want to repeat? 1 for yes 0 for quit:\n"))
-    if r1 == 0:
-        print("Goodbye!")
-        repeat = False'''
 
 def not_e(text): #E
     find_e = text.find("e") 
@@ -162,14 +155,6 @@ def not_e(text): #E
         return True 
     else: 
         return False 
-'''repeat = True
-while repeat:
-    lipogram = "this work contains no glyph"
-    print(not_e(lipogram))
-    r1 = int(input("Do you want to repeat? 1 for yes 0 for quit:\n"))
-    if r1 == 0:
-        print("Goodbye!")
-        repeat = False'''
 
 def not_char(text, char): #F
     find_char = text.find(char) 
@@ -177,14 +162,6 @@ def not_char(text, char): #F
         return True 
     else: 
         return False 
-'''repeat = True
-while repeat:
-    lipogram = "this work contains no glyph" 
-    print(not_char(lipogram, "e")) 
-    r1 = int(input("Do you want to repeat? 1 for yes 0 for quit:\n"))
-    if r1 == 0:
-        print("Goodbye!")
-        repeat = False'''
 
 def not_emod(text): #G
     words = text.split()
@@ -196,14 +173,6 @@ def not_emod(text): #G
             no_e += 1
     percent = (no_e / length) * 100
     return print(f"Perecent of words with no 'e' in the string: {percent:.2f}%")
-'''repeat = True
-while repeat:
-    text = input("Input a string: ")
-    not_emod(text)
-    r1 = int(input("Do you want to repeat? 1 for yes 0 for quit:\n"))
-    if r1 == 0:
-        print("Goodbye!")
-        repeat = False'''
 
 def avoids(): #H
     word = input("Enter a word: ")
@@ -214,25 +183,6 @@ def avoids(): #H
             return False
     print("True")
     return True
-repeat = True
-while repeat:
-    avoids()
-    forbidden = input("Enter a string of forbidden letters: ")
-    words = input("Enter a string of words seperated by spaces: ").split()
-    valword = 0
-    for i in words:
-        exists = False
-        for letter in forbidden:
-            if letter in i:
-                found = True
-                break
-        if not exists:
-            valword += 1
-    print(f"Number of words that do not contain any forbidden letters: {valword}")
-    r1 = int(input("Do you want to repeat? 1 for yes 0 for quit:\n"))
-    if r1 == 0:
-        print("Goodbye!")
-        repeat = False
 
 def uses_only(): #I
     letters = input("Input a string of letters: ")
@@ -243,14 +193,7 @@ def uses_only(): #I
             return False
     print("True")
     return True
-repeat = True
-while repeat:
-    uses_only()
-    r1 = int(input("Do you want to repeat? 1 for yes 0 for quit:\n"))
-    if r1 == 0:
-        print("Goodbye!")
-        repeat = False
-
+    
 def uses_all(): #J
     word = input("Input a word: ")
     reqletters = input("Input a string of required letters: ")
@@ -260,13 +203,6 @@ def uses_all(): #J
             return False
     print("True")
     return True
-repeat = True
-while repeat:
-    uses_all()
-    r1 = int(input("Do you want to repeat? 1 for yes 0 for quit:\n"))
-    if r1 == 0:
-        print("Goodbye!")
-        repeat = False
 
 def is_abecedarian(): #K
     word = input("Input a word: ")
@@ -276,13 +212,6 @@ def is_abecedarian(): #K
             return False
     print("True")
     return True
-repeat = True
-while repeat:
-    is_abecedarian()
-    r1 = int(input("Do you want to repeat? 1 for yes 0 for quit:\n"))
-    if r1 == 0:
-        print("Goodbye!")
-        repeat = False
 
 def find(): #L and M
     word = input("Input a word: ")
@@ -294,13 +223,6 @@ def find(): #L and M
             return i
     print("-1, character was not found")
     return -1
-repeat = True
-while repeat:
-    find()
-    r1 = int(input("Do you want to repeat? 1 for yes 0 for quit:\n"))
-    if r1 == 0:
-        print("Goodbye!")
-        repeat = False
 
 def is_sorted(s): #N
     words = s.split()
@@ -310,14 +232,6 @@ def is_sorted(s): #N
             return False
     print("True. words are in ascending order")
     return True
-repeat = True
-while repeat:
-    s = input("Input a string with spaces between each word: ") 
-    is_sorted(s)
-    r1 = int(input("Do you want to repeat? 1 for yes 0 for quit:\n"))
-    if r1 == 0:
-        print("Goodbye!")
-        repeat = False
 
 def is_anagram(): #O
     word1 = input("Input the first word: ")
@@ -332,13 +246,6 @@ def is_anagram(): #O
                 return False
     print("True")
     return True
-repeat = True
-while repeat:
-    is_anagram()
-    r1 = int(input("Do you want to repeat? 1 for yes 0 for quit:\n"))
-    if r1 == 0:
-        print("Goodbye!")
-        repeat = False
 
 def has_duplicates(): #P
     string = input("Please input a string: ")
@@ -351,13 +258,6 @@ def has_duplicates(): #P
             seen.append(char)
     print("False")
     return False
-repeat = True
-while repeat:
-    has_duplicates()
-    r1 = int(input("Do you want to repeat? 1 for yes 0 for quit:\n"))
-    if r1 == 0:
-        print("Goodbye!")
-        repeat = False
 
 def remove_duplicates(): #Q
     string = input("Please input a string: ")
@@ -368,13 +268,6 @@ def remove_duplicates(): #Q
             seen.append(char)
             new += char
     return print(f"Here is the new string: {new}")
-repeat = True
-while repeat:
-    remove_duplicates()
-    r1 = int(input("Do you want to repeat? 1 for yes 0 for quit:\n"))
-    if r1 == 0:
-        print("Goodbye!")
-        repeat = False
     
 
 
@@ -391,6 +284,7 @@ while repeat:
 
         
         
+
 
 
 
